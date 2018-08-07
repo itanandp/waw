@@ -41,6 +41,7 @@ $(document).ready(function () {
             if(emailField.match(emailReg)){
                 $("#footer-form").removeClass("error");
                 $("#footer-form").trigger('reset');
+                // window.alert('Submit!')
                 return;
             }
         }
