@@ -12,6 +12,14 @@ body {
   p {
     font-family: $open-sans;
   }
+  input {
+    border: none;
+  }
+
+  .error {
+    border: #ff3300 2px solid;
+  }
+
 
   .blue {
     color: $blue;
@@ -29,10 +37,34 @@ body {
     border-radius: 4px;
     padding: 10px 30px;
     font-size: 18px;
+    display: inline-block;
+    float: right;
     @include mobile {
+      float: none;
       display: block;
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
+    }
+  }
+  .single-input-form {
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 0 14px 0 rgba(151, 156, 157, 0.5);
+    display: block;
+    height: 60px;
+    max-width: 525px;
+    padding: 5px;
+    @include tablet {
+      padding-bottom: 10px;
+      margin: 0px 15px;
+    }
+    @include mobile {
+      height: auto;
+    }
+    input {
+      height: 50px;
+      display: inline-block;
+      float: left;
     }
   }
   .featured-section {
@@ -112,7 +144,6 @@ body {
           margin-bottom: 22px;
           height: 58px;
           width: 100%;
-          border: none;
         }
         .button-container {
           text-align: right;
@@ -155,7 +186,7 @@ body {
   
     .info-row {
       margin: 0 auto;
-      margin-bottom: 85px;
+      margin-bottom: 40px;
       @include tablet {
         font-size: 16px;
         margin-bottom: 0px;
@@ -173,8 +204,8 @@ body {
       &:after {
         content: "\00a0";
         position: absolute;
-        width: 2px;
-        height: 125%;
+        width: 1px;
+        height: 120%;
         background-color: #4B5759;
         top: -25px;
         right: 0;
@@ -195,7 +226,7 @@ body {
         text-align: left;
       }
       .event {
-        margin-bottom: 35px;
+        margin-bottom: 60px;
       }
       .event-name {
         display: inline-block;
@@ -276,19 +307,6 @@ body {
         font-weight: 700;
         margin-bottom: 40px;
       }
-      .sponsor-form-container {
-        background-color: $white;
-        border-radius: 4px;
-        box-shadow: 0 0 14px 0 rgba(151, 156, 157, 0.5);
-        @include tablet {
-          padding-bottom: 10px;
-          margin: 0px 15px;
-        }
-        input {
-          height: 60px;
-          border: none;
-        }
-      }
     }
   }
   .footer {
@@ -302,19 +320,6 @@ body {
         font-family: $mont;
         font-size: 30px;
         letter-spacing: 0.11;
-      }
-      .footer-form-container {
-        background-color: $white;
-        border-radius: 4px;
-        box-shadow: 0 0 14px 0 rgba(151, 156, 157, 0.5);
-        @include tablet{
-          padding-bottom: 10px;
-          margin: 0px 15px;
-        }
-        input {
-          height: 60px;
-          border: none;
-        }
       }
       .copyright {
         margin-top: 85px;
