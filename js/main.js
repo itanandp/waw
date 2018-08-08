@@ -14,6 +14,7 @@ $(document).ready(function () {
             if (emailField.match(emailReg)) {
                 $("#rsvp-form").removeClass("error");
                 $("#rsvp-form").trigger("reset");
+                $("#rsvp-form").addClass("success");
                 return
             }
         }
@@ -27,6 +28,7 @@ $(document).ready(function () {
             if(emailField.match(emailReg)){
                 $("#sponsor-form").removeClass("error");
                 $("#sponsor-form").trigger('reset');
+                $("#sponsor-form").addClass("success");
                 return;
             }
         }
@@ -41,7 +43,7 @@ $(document).ready(function () {
             if(emailField.match(emailReg)){
                 $("#footer-form").removeClass("error");
                 $("#footer-form").trigger('reset');
-                // window.alert('Submit!')
+                $("#footer-form").addClass("success");
                 return;
             }
         }
