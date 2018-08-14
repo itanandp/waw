@@ -6,16 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Web Analytics Wednesday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400,700" rel="stylesheet">
 </head>
 
 <body>
   <div class="featured-section">
     <div class="container">
-      <p class="event-header">
-        <span class="city">PHILADELPHIA \</span> Web Analytics Wednesday</p>
+      <p class="event-header"><span class="city">PHILADELPHIA \</span> Web Analytics Wednesday</p>
       <div class="row featured-row">
         <div class="col-sm-6">
           <div class="featured-details-container">
@@ -28,7 +27,7 @@
           <form class="rsvp-form" id="rsvp-form" action="">
             <h3>Topic Headline</h3>
             <input id="rsvp-input-name" type="text" placeholder="Full Name">
-            <input id="rsvp-input-email" type="text" placeholder="Email">
+            <input id="rsvp-input-email" type="email" placeholder="Email">
             <input id="rsvp-input-company" type="text" placeholder="Company">
             <input id="rsvp-input-title" type="text" placeholder="Job Title">
             <div class="row">
@@ -44,7 +43,11 @@
 
   <div class="details-section">
     <div class="container">
-      <h3 class="blue">Event Details</h3>
+      <div class="row">
+        <div class="col-centered">
+          <h3 class="blue">Event Details</h3>
+        </div>
+      </div>
       <div class="row info-row">
         <div class="col-sm-6 details-col">
           <p>
@@ -73,7 +76,7 @@
           <div class="photo-container">
             <img src='./images/james_manley.png' alt='James Manley' />
             <div class="photo-caption">
-              <p class="blue">Jim Manley</p>
+              <p class="blue name">Jim Manley</p>
               <span>Senior Manager, Digital Search Analytics</span>
               <span>(Digital Media Team/Search Optimization)</span>
             </div>
@@ -83,7 +86,7 @@
           <div class="photo-container">
             <img src='./images/mat_levin.png' alt='Mat Levin' />
             <div class="photo-caption">
-              <p class="blue">Mat Levin</p>
+              <p class="blue name">Mat Levin</p>
               <span>Senior Analyst, Web Strategy & Analytics</span>
               <span>(Strategy & Analytics Department)</span>
             </div>
@@ -100,14 +103,18 @@
 
   <div class="sponsor-section">
     <div class="container">
-      <h3 class="blue">Sponsored by</h3>
       <div class="row">
-        <div class="sponsor-logo-container col-sm-8 col-sm-offset-2">
+        <div class="col-centered">
+          <h3 class="blue sponsor-header">Sponsored by</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="sponsor-logo-container col-sm-8 col-centered">
           <img src="./images/tmmdata_color_logo.png">
         </div>
       </div>
       <div class="row sponsor-info">
-        <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-sm-10 col-centered">
           <p>TMMData is a premier provider of self-service data integration, preparation, and management software. Our powerful,
             drag-and-drop platform provides a range of users with seamless access, automated data transformation, flexible
             governance solutions, and direct outputs to any platform or database, so digital marketers and analysts can focus
@@ -117,11 +124,15 @@
             has additional offices in Pittsburgh, Philadelphia, and Baltimore. For more information, visit TMMData.com.</p>
         </div>
       </div>
-      <h4 class="blue">Become a Sponsor</h4>
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-centered">
+          <h4 class="blue become-sponsor">Become a Sponsor</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-centered">
             <form action="" class="single-input-form" id="sponsor-form">
-              <input type="text" placeholder="Email" id="sponsor-input-email">
+              <input type="email" placeholder="Email" id="sponsor-input-email">
               <button class="button-orange">Sponsor</button>
             </form>
         </div>
@@ -131,17 +142,23 @@
 
   <div class="footer">
     <div class="container">
-      <h3 class="white">Sign Up for Event Emails</h3>
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-centered">
+          <h3 class="white sign-up">Sign Up for Event Emails</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-centered">
           <form action="" class="single-input-form" id="footer-form">
-            <input type="text" placeholder="Email" id="footer-input-email">
+            <input type="email" placeholder="Email" id="footer-input-email">
             <button class="button-orange">Sign Up</button>
           </form>
         </div>
       </div>
-      <div class="copyright white">
-        <span>&copy; Copyright 2018. Design by BrainDo</span>
+      <div class="row">
+        <div class="copyright white col-centered">
+          <span>&copy; Copyright 2018. Design by BrainDo</span>
+        </div>
       </div>
     </div>
   </div>

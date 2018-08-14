@@ -9,7 +9,13 @@ $mont: 'Montserrat', sans-serif;
 @mixin small { @media (max-width: 768px) { @content; }}
 @mixin xsmall { @media (max-width: 480px) { @content; }}
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
+  font-family: $open-sans;
   p {
     font-family: $open-sans;
   }
@@ -26,7 +32,6 @@ body {
     border: 2px solid #ff3300;
   }
 
-
   .blue {
     color: $blue;
     font-family: $mont;
@@ -37,9 +42,14 @@ body {
     font-family: $mont;
     font-weight: 700;
   }
+  .col-centered{
+    float: none;
+    margin: 0 auto;
+  }
   .button-orange {
     background: linear-gradient(45deg, #E0484D, #F0B045);
     color: $white;
+    border: none;
     border-radius: 4px;
     font-family: $mont;
     font-weight: 700;
@@ -75,6 +85,7 @@ body {
       height: 50px;
       display: inline-block;
       float: left;
+      padding-left: 15px;
 
       @include xsmall {
         margin-left: 10px;
@@ -88,6 +99,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-bottom: 100px;
     .container {
       @include xsmall {
         padding: 0px 10px;
@@ -97,6 +109,7 @@ body {
         font-family: $mont;
         margin-top: 80px;
         margin-bottom: 80px;
+        letter-spacing: 0.13px;
         @include small {
           font-size: 12px;
           margin-top: 15px;
@@ -121,6 +134,7 @@ body {
             font-family: $mont;
             line-height: 60px;
             letter-spacing: 0.17px;
+            margin-bottom: 20px;
             @include small {
               font-size: 24px;
               line-height: 30px;
@@ -140,12 +154,10 @@ body {
           background-color: rgba(255, 255, 255, 0.3);
           border-radius: 4px;
           padding: 25px;
-          margin-bottom: 100px;
           box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
 
           @include small {
             margin-top: 30px;
-            margin-bottom: 40px;
             padding-left: 10px;
             padding-right: 10px;
           }
@@ -196,6 +208,7 @@ body {
     line-height: 30px;
     background-color: $light-grey;
     color: $grey;
+    padding-bottom: 100px;
 
     @include xsmall {
       padding-left: 5px;
@@ -242,9 +255,9 @@ body {
       &:after {
         content: "\00a0";
         position: absolute;
-        width: 1px;
+        width: 2px;
         height: 120%;
-        background-color: #4B5759;
+        background-color: rgb(170, 170, 170);
         top: -25px;
         right: 0;
         @include medium {
@@ -276,6 +289,7 @@ body {
         margin-right: 5px;
         position: relative;
         top: 2px;
+        letter-spacing: 0.09px;
       }
       .event-name {
         display: inline-block;
@@ -300,7 +314,7 @@ body {
       .photo-container {
         max-width: 360px;
         margin: 0 auto;
-        margin-bottom: 100px;
+        // margin-bottom: 100px;
         @include small {
           margin-bottom: 20px;
         }
@@ -320,6 +334,9 @@ body {
             text-align: left;
             font-size: 24px;
             font-weight: bold;
+          }
+          .name {
+            letter-spacing: 0.09px;
           }
         }
       }
@@ -348,10 +365,11 @@ body {
         padding-top: 40px;
         padding-bottom: 50px;
       }
-      h3 {
+      .sponsor-header {
         margin-bottom: 60px;
         font-size: 36px;
         font-weight: 700;
+        letter-spacing: 0.13px;
         @include xsmall {
           font-size: 24px;
           margin-bottom: 30px;
@@ -364,6 +382,7 @@ body {
         }
         img {
           width: 100%;
+          max-width: 668px;
         }
       }
       .sponsor-info {
@@ -372,10 +391,11 @@ body {
           margin-bottom: 45px;
         }
       }
-      h4{
+      .become-sponsor {
         font-size: 30px;
         font-weight: 700;
         margin-bottom: 40px;
+        letter-spacing: 0.11px;
         @include xsmall {
           font-size: 18px;
         }
@@ -393,18 +413,20 @@ body {
         padding-left: 20px;
         padding-right: 20px;
       }
-      h3 {
+      .sign-up {
         margin-bottom: 30px;
         font-family: $mont;
         font-size: 30px;
+        letter-spacing: 0.11px;
         @include xsmall {
           font-size: 18px;
         }
       }
       .copyright {
+        font-family: $open-sans;
         margin-top: 85px;
         margin-bottom: 45px;
-        font-weight: 300;
+        font-weight: 400;
         @include xsmall {
           margin-top: 50px;
           margin-bottom: 30px;
